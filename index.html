@@ -377,7 +377,7 @@
     z-index: 2;
 }
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
     font-weight: bold;
@@ -403,25 +403,31 @@
     50% { transform: rotate(10deg);}
 }
 .typewriter {
+    width: 22.5ch; /* <– key fix */
     overflow: hidden;
     border-right: .15em solid var(--primary-color);
     white-space: nowrap;
     margin: 0 auto 2rem auto;
     letter-spacing: .08em;
-    animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
     font-size: 1.5rem;
     color: var(--secondary-color);
     opacity: 0;
-    animation: slideInLeft 1s 0.4s forwards, typing 2.5s steps(30, end) 1s 1 normal both, blink-caret .75s step-end infinite 3.5s;
+    animation: 
+        slideInLeft 1s 0.4s forwards, 
+        typing 3s steps(30, end) 1s 1 normal both, 
+        blink-caret .75s step-end infinite 4s;
 }
+
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; }
+    to { width: 22ch; } 
 }
+
 @keyframes blink-caret {
-    from, to { border-color: transparent }
+    from, to { border-color: transparent; }
     50% { border-color: var(--primary-color); }
 }
+
 .cta-button.pulse {
     animation: pulseAnim 1.5s infinite;
 }
@@ -1590,7 +1596,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Your Name</div>
+            <div class="logo">Lau Hong Chun</div>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -1641,15 +1647,15 @@
     <div class="hero-content">
         <div class="hero-text">
             <h1>
-                <span class="wave">👋</span> Hi, I'm <span class="highlight">Your Name</span>
+                <span class="wave">👋</span> Hi, I'm <span class="highlight">Lau Hong Chun</span>
             </h1>
-            <p class="subtitle typewriter">Full Stack Developer & UI/UX Designer</p>
-            <p>I create amazing digital experiences that combine beautiful design with powerful functionality. Passionate about crafting user-centered solutions that make a real difference.</p>
+            <p class="subtitle typewriter">Bachelor Of Economics</p>
+            <p style="margin-bottom:20px">I’m a third-year Bachelor of Economics student at Universiti Sains Malaysia (USM). My studies have provided me with a strong foundation in economic theory, data analysis, and policy-related issues. I’m now ready to apply what I’ve learned to real-world situations.</p>
             <a href="#contact" class="cta-button pulse">Get In Touch</a>
         </div>
         <div class="hero-visual">
             <div class="floating-avatar">
-                <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Your Avatar" />
+                <img style="width: 200px; height: 200px" src="https://cdn-icons-png.flaticon.com/512/5531/5531533.png" alt="Your Avatar" />
                 <div class="avatar-glow"></div>
             </div>
             <div class="floating-shapes">
