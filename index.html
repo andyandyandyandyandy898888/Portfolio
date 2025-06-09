@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAU HONG CHUN- Portfolio</title>
+    <title>Your Name - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -1224,13 +1224,373 @@
         min-width: 0;
     }
 }
+
+/* ...existing code... */
+.skills-dashboard {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skills-list {
+    flex: 2 1 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 0 2px 8px var(--shadow);
+    flex-shrink: 0;
+}
+.skills-summary {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 260px;
+}
+.resume-card, .contact-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px var(--shadow);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    animation: slideInRight 1s;
+}
+.resume-icon {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+.resume-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.resume-link:hover {
+    color: var(--accent-color);
+}
+.contact-card {
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+.contact-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+@media (max-width: 900px) {
+    .skills-dashboard {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    .skills-summary {
+        min-width: 0;
+    }
+}
+
+.skills-dashboard {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-list {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    min-width: 0;
+}
+.skill-category {
+    margin-bottom: 0;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-color);
+    animation: slideInLeft 1s;
+    width: 100%;
+}
+.category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    background: none;
+    text-align: left;
+}
+.skills-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 2rem;
+}
+.skill-item {
+    background: var(--bg-card);
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+}
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 0 2px 8px var(--shadow);
+    flex-shrink: 0;
+}
+.skill-bar {
+    width: 100%;
+    background: var(--border-color);
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1rem 0 0.5rem 0;
+    position: relative;
+}
+.skill-progress {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 6px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 2px 8px var(--shadow);
+    position: relative;
+}
+.skill-label {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-left: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    letter-spacing: 0.5px;
+    background: var(--bg-secondary);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    box-shadow: 0 1px 4px var(--shadow);
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+.skills-summary {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 260px;
+    align-items: center;
+}
+.resume-card, .contact-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px var(--shadow);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    animation: slideInRight 1s;
+    width: 100%;
+    max-width: 350px;
+}
+.resume-icon {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+.resume-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.resume-link:hover {
+    color: var(--accent-color);
+}
+.contact-card {
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+.contact-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+@media (max-width: 1100px) {
+    .skills-dashboard {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .skills-list {
+        width: 100%;
+        max-width: 700px;
+    }
+    .skills-summary {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .skills-list {
+        max-width: 100%;
+    }
+    .skills-subgrid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem 0;
+    }
+    .skills-summary {
+        max-width: 100%;
+        min-width: 0;
+        align-items: center;
+    }
+    .resume-card, .contact-card {
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+    .skill-label {
+        position: static;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        right: unset;
+        top: unset;
+    }
+    .skill-category {
+        padding: 1rem 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .skills-dashboard {
+        gap: 1rem;
+    }
+    .skills-list {
+        gap: 1.2rem;
+    }
+    .category-title {
+        font-size: 1rem;
+    }
+    .skill-header h4 {
+        font-size: 1rem;
+    }
+    .resume-card, .contact-card {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Add to your <style> section or main CSS file */
+/* ...existing code... */
+.skill-category {
+    margin-bottom: 2.5rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.2rem 1rem 0.5rem 1rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-color);
+    animation: slideInLeft 1s;
+}
+.category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    background: none;
+    text-align: left;
+}
+@media (max-width: 900px) {
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    .skill-category {
+        margin-bottom: 2rem;
+    }
+}
+/* ...existing code... */
+/* ...existing code... */
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">LAU HONG CHUN</div>
+            <div class="logo">Your Name</div>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -1281,10 +1641,10 @@
     <div class="hero-content">
         <div class="hero-text">
             <h1>
-                <span class="wave">👋</span> Hi, I'm <span class="highlight">Lau Hong Chun</span>
+                <span class="wave">👋</span> Hi, I'm <span class="highlight">Your Name</span>
             </h1>
-            <p class="subtitle typewriter">Bachelor Of Economics</p>
-            <p>My name is Lau Hong Chun year 3 student from Universiti Sains Malaysia (USM) that studying in Bachelor of Economics.</p>
+            <p class="subtitle typewriter">Full Stack Developer & UI/UX Designer</p>
+            <p>I create amazing digital experiences that combine beautiful design with powerful functionality. Passionate about crafting user-centered solutions that make a real difference.</p>
             <a href="#contact" class="cta-button pulse">Get In Touch</a>
         </div>
         <div class="hero-visual">
@@ -1433,71 +1793,184 @@
         </div>
     </section>
 
-    <!-- Soft Skills Section -->
-    <section id="skills" class="skills">
+  <section id="skills" class="skills">
     <div class="container">
         <h2>Skills</h2>
         <div class="skills-dashboard">
             <div class="skills-list">
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #e44d26;">&#60;/&#62;</span>
-                        <h4>HTML & CSS</h4>
+                <!-- Technical Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Technical Expertise</h3>
+                    <div class="skills-subgrid">
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #e44d26;">&#60;/&#62;</span>
+                                <h4>HTML & CSS</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                            <span class="skill-label">Expert</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #f7df1e; color: #222;">&#128187;</span>
+                                <h4>JavaScript</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #61dafb; color: #222;">⚛️</span>
+                                <h4>React</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #3c873a;">&#128187;</span>
+                                <h4>Node.js</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                            <span class="skill-label">Proficient</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #ff69b4;">🎨</span>
+                                <h4>UI/UX Design</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #3776ab;">🐍</span>
+                                <h4>Python</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                            <span class="skill-label">Intermediate</span>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%"></div>
-                    </div>
-                    <span class="skill-label">Expert</span>
                 </div>
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #f7df1e; color: #222;">&#128187;</span>
-                        <h4>JavaScript</h4>
+                <!-- Language Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skills-subgrid">
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #4285f4;">🌐</span>
+                                <h4>English</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="98%"></div>
+                            </div>
+                            <span class="skill-label">Fluent</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #fbbc05;">🇫🇷</span>
+                                <h4>French</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                            <span class="skill-label">Intermediate</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #34a853;">🇯🇵</span>
+                                <h4>Japanese</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40%"></div>
+                            </div>
+                            <span class="skill-label">Basic</span>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%"></div>
-                    </div>
-                    <span class="skill-label">Advanced</span>
                 </div>
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #61dafb; color: #222;">⚛️</span>
-                        <h4>React</h4>
+                <!-- Writing Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Writing Skills</h3>
+                    <div class="skills-subgrid">
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #6366f1;">📝</span>
+                                <h4>Technical Writing</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #06b6d4;">✍️</span>
+                                <h4>Blogging</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                            <span class="skill-label">Proficient</span>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%"></div>
-                    </div>
-                    <span class="skill-label">Advanced</span>
                 </div>
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #3c873a;">&#128187;</span>
-                        <h4>Node.js</h4>
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="skills-subgrid">
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #f59e42;">🤝</span>
+                                <h4>Teamwork</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92%"></div>
+                            </div>
+                            <span class="skill-label">Excellent</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #8b5cf6;">💡</span>
+                                <h4>Problem Solving</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-label">Excellent</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #06b6d4;">🗣️</span>
+                                <h4>Communication</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
+                        <div class="skill-item fade-in">
+                            <div class="skill-header">
+                                <span class="skill-icon" style="background: #34a853;">⏰</span>
+                                <h4>Time Management</h4>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-label">Advanced</span>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80%"></div>
-                    </div>
-                    <span class="skill-label">Proficient</span>
-                </div>
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #ff69b4;">🎨</span>
-                        <h4>UI/UX Design</h4>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="88%"></div>
-                    </div>
-                    <span class="skill-label">Advanced</span>
-                </div>
-                <div class="skill-item fade-in">
-                    <div class="skill-header">
-                        <span class="skill-icon" style="background: #3776ab;">🐍</span>
-                        <h4>Python</h4>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75%"></div>
-                    </div>
-                    <span class="skill-label">Intermediate</span>
                 </div>
             </div>
             <div class="skills-summary fade-in">
@@ -1554,6 +2027,7 @@
         </div>
     </div>
 </section>
+<!-- ...existing code... -->
             </div>
         </div>
     </section>
